@@ -11,7 +11,6 @@ def quantize(phases, bits=16):
     return [np.round(p * scale).astype(int) for p in phases]
 
 def generate_verilog(phases, M, filename="fir_poly.v"):
-    def generate_verilog(phases, M, filename="fir_poly.v"):
     taps = len(phases[0])
     WIDTH = 16
 
