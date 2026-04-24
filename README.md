@@ -38,9 +38,7 @@ cic_compensator/
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-pip install -r requirements.txt
+pip install git+https://github.com/mario-akira/cic_compensator.git
 ```
 
 
