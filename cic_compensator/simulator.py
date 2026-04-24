@@ -4,7 +4,7 @@ from scipy import signal
 
 def simulate_system(f, fir, Hcic, fs):
     """
-    Calcula a resposta combinada CIC+FIR projetados
+    Simulates CIC+FIR filters response
     """
     w, h = signal.freqz(fir, worN=len(f), fs=fs)
 
@@ -13,6 +13,9 @@ def simulate_system(f, fir, Hcic, fs):
     return w, h, H_total
 
 def plot_response(f, Hcic, h, H_total, f_pass):
+    """
+    Ploting the response
+    """
     eps = 1e-12
 
     plt.figure(figsize=(10,6))
@@ -22,21 +25,21 @@ def plot_response(f, Hcic, h, H_total, f_pass):
 
     plt.axvline(f_pass, linestyle="--", label="f_pass")
 
-    plt.xlabel("Frequência (Hz)")
+    plt.xlabel("Frequency (Hz)")
     plt.ylabel("dB")
-    plt.title("Resposta do sistema")
+    plt.title("System Response")
     plt.grid()
     plt.legend()
     plt.show()
 
 def print_stats(fir, sh_fir):
     """
-    Exibe informações técnicas no terminal sobre o filtro projetado.
+    Show data from filter simulation and project.
     """
     print("-" * 30)
-    print("ESTATÍSTICAS DO FILTRO")
+    print("Filter Stats")
     print("-" * 30)
-    print(f"Número de Taps: {len(fir)}")
-    print(f"Shift sugerido: {sh_fir}")
-    print(f"Ganho DC (FIR): {20 * np.log10(np.sum(fir)):.2f} dB")
+    print(f"Number of Taps: {len(fir)}")
+    print(f"Shift suggestion: {sh_fir}")
+    print(f"DC Gain (FIR): {20 * np.log10(np.sum(fir)):.2f} dB")
     print("-" * 30)

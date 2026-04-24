@@ -24,6 +24,5 @@ class FilterManager:
 
     def show_results(self, f_pass):
         f = np.linspace(0, self.cfg.fs/2, 2048)
-        # h_fir aqui é o h calculado no design_fir_compensator
         w, h, H_total = simulate_system(f, self.fir_coeffs, self.Hcic, self.cfg.fs)
         plot_response(f, self.Hcic, h, H_total, f_pass)
