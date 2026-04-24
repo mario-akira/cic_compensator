@@ -2,4 +2,4 @@
 
 ## Instalation Guide
 ```bash
-pip install git+https://github.com/seu-usuario/nome-do-repositorio.git
+pip install git+https://github.com/mario-akira/cic_compensator.git
