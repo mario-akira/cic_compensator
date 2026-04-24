@@ -1,7 +1,7 @@
 # CIC + FIR Filter Design Tool
 ---
 ## 📖 Overview
-This project aims to study Python library creation.  
+This project aims to study Python library creation with AI help.
 The tool assists in **designing and simulating multi-phase FIR compensation filters** for CIC filters.  
 
 It allows you to:
