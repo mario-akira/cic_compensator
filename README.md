@@ -1,5 +1,5 @@
 # cic_compensator
 
-## Instalação
+## Instalation Guide
 ```bash
 pip install git+https://github.com/seu-usuario/nome-do-repositorio.git
